@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+:root {
+  /* Text */
+  --Pale-Violet: hsl(276, 100%, 81%);
+  --Moderate-Violet: hsl(276, 55%, 52%);
+  --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  --Grayish-Blue: hsl(206, 6%, 79%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+  /* Gradients */
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  /* Secondary */
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Violet: hsl(270, 20%, 96%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Light-Grayish-Violet);
+}
+main {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  /* grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
+  place-items: center;
+  max-width: 100%;
+}
+main::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 80%;
+  top: 0;
+  left: -120px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--Light-Magenta)-50%,
+    var(--Light-Violet)
+  );
+  z-index: -1;
+  border-radius: 0 0px 250px 250px;
+}
+
+main::after {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 80%;
+  bottom: 0;
+  right: -160px;
+  background-color: hsl(270, 20%, 94%);
+  z-index: -1;
+  border-radius: 250px 250px 0px 0px;
+}
+.left {
+  width: 80%;
+  background-color: var(--Light-Grayish-Violet);
+  color: var(--Light-Grayish-Violet);
+  border: 15px solid var(--White);
+  border-radius: 40px;
+  box-shadow: 10px 10px 10px 0px hsl(270deg 19% 89%);
+}
+.left header {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(
+    to left,
+    var(--Light-Magenta),
+    var(--Light-Violet) 50%
+  );
+  position: relative;
+  border-radius: 30px 30px 10px 10px;
+  box-shadow: 0px 5px 10px 0 var(--Grayish-Blue);
+}
+.left header::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 200px;
+  height: 40px;
+  background-color: var(--White);
+  transform: translate(-50%, -50%);
+  border-radius: 40px;
+}
+.left header .icon {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.left header i {
+  color: var(--White);
+  cursor: pointer;
+}
+.left header .icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  border: 2px solid var(--White);
+  cursor: pointer;
+}
+.left header .name {
+  display: inline-block;
+}
+.left header .name h1 {
+  font-size: 16px;
+  color: var(--Pale-Violet);
+  margin-bottom: 5px;
+}
+.left header .name span {
+  color: var(--Dark-Grayish-Violet);
+}
+
+.body {
+  padding: 5px 20px 10px;
+}
+.body .chat-left {
+  width: 250px;
+}
+.body .chat-left p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--Moderate-Violet);
+  padding: 10px;
+  border-radius: 20px 20px 20px 5px;
+  margin-top: 10px;
+  background-color: hsl(270, 20%, 90%);
+}
+
+.body .chat-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.body .chat-right .image {
+  margin-top: 20px;
+}
+.body .chat-right img {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+.body .chat-right p {
+  color: var(--Desaturated-Dark-Violet);
+  padding: 10px;
+  border-radius: 20px 20px 5px 20px;
+  margin-top: 10px;
+  background-color: var(--White);
+  width: 250px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.body .chat-left .circel {
+  margin: 10px 0;
+  background-image: linear-gradient(
+    to left,
+    var(--Light-Violet),
+    var(--Light-Magenta)
+  );
+  padding: 15px;
+  border-radius: 20px 20px 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.body .chat-left .circel .time::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid var(--Very-Light-Magenta);
+  background-color: transparent;
+}
+
+.body .chat-left .circel .time span {
+  margin-left: 30px;
+  color: var(--Pale-Violet);
+}
+.body .chat-left .circel .price span {
+  color: var(--White);
+
+  font-weight: 500;
+}
+form {
+  margin: 0 auto 15px;
+  width: 90%;
+  position: relative;
+}
+form input[type="text"] {
+  border: none;
+  outline: none;
+  background-color: var(--White);
+  padding: 20px;
+  width: 100%;
+  border-radius: 50px;
+}
+form input[type="text"]::placeholder {
+  color: var(--Dark-Grayish-Violet);
+}
+form .submit {
+  position: absolute;
+  background-color: var(--Very-Dark-Desaturated-Violet);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+form .submit i {
+  color: var(--White);
+}
+
+.right {
+  width: 80%;
+}
+
+.right h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--Very-Dark-Desaturated-Violet);
+  margin-bottom: 20px;
+}
+
+.right p {
+  color: var(--Dark-Grayish-Violet);
+  line-height: 1.6;
+  width: 460px;
+}
+
+@media (max-width: 997px) {
+  main {
+    grid-template-columns: repeat(1, 500px);
+  }
+  .left {
+    width: 80%;
+    margin: 50px auto;
+  }
+  .right {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    width: 100%;
+    margin: 50px 0;
+  }
+  main::before {
+    width: 250px;
+    height: 60%;
+  }
+
+  main::after {
+    width: 350px;
+    height: 50%;
+  }
+  .left {
+    width: 70%;
+    margin: auto auto auto 10px;
+  }
+  .body .chat-right {
+    margin-left: 15px;
+  }
+  .right {
+    width: fit-content;
+    margin: 40px auto auto 30px;
+    text-align: center;
+  }
+  .right p {
+    width: 315px;
+    margin: auto;
+  }
+}
