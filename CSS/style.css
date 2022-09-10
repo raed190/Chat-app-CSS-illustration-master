@@ -50,8 +50,8 @@ main::before {
   left: -120px;
   background-image: linear-gradient(
     to bottom,
-    var(--Light-Magenta)-50%,
-    var(--Light-Violet)
+    var(--Light-Magenta) -15%,
+    var(--Light-Violet) 30%
   );
   z-index: -1;
   border-radius: 0 0px 250px 250px;
