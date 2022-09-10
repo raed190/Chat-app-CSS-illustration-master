@@ -121,7 +121,7 @@ main::after {
 .left header .name {
   display: inline-block;
 }
-.left header .name h1 {
+.left header .name p {
   font-size: 16px;
   color: var(--Pale-Violet);
   margin-bottom: 5px;
